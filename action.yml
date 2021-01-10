@@ -11,17 +11,17 @@ inputs:
   upstream_repository:
     description: 'Repository name to clone.'
     required: true
+  upstream_branch:
+    description: 'Source branch from which changes will be pushed.'
+    default: 'main'
+    required: false
   target_repository:
     description: 'Repository name to push. Default or empty value represents current github repository (${GITHUB_REPOSITORY})'
     default: ''
     required: false
-  upstream_branch:
-    description: 'Source branch from which changes will be pushed.'
-    default: 'master'
-    required: false
   target_branch:
     description: 'Destination branch to push changes.'
-    default: 'master'
+    default: 'main'
     required: false
   force:
     description: 'Determines if force push is used'
