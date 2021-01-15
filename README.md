@@ -5,15 +5,15 @@
 ```yaml
 jobs:
   update_external_airflow_fork:
-    runs-on: ubuntu-latest
+    runs-on: Ubuntu-20.04
     steps:
-      - uses: TobKed/github-forks-sync-action@master
+      - uses: danshui-git/github-forks-sync-action@master
         with:
           github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           upstream_repository: apache/airflow
+          upstream_branch: main
           target_repository: TobKed/airflow
-          upstream_branch: master
-          target_branch: master
+          target_branch: main
           force: true
           tags: true
 ```
