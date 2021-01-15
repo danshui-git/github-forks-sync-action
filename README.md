@@ -7,7 +7,7 @@ jobs:
   update_external_airflow_fork:
     runs-on: Ubuntu-20.04
     steps:
-      - uses: danshui-git/github-forks-sync-action@master
+      - uses: danshui-git/github-forks-sync-action@main
         with:
           github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           upstream_repository: apache/airflow
